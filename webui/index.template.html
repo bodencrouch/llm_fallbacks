@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>llm-fallbacks — free model chat</title>
+  <meta name="description" content="Zero-config chat over ranked free LLM fallbacks">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./icon.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./assets/shell/styles.css">
+  <link rel="stylesheet" href="./assets/shell/chat-overrides.css">
+  <link rel="stylesheet" href="./assets/chat.css">
+  <script src="./config.js?v=__APP_VERSION__"></script>
+</head>
+<body>
+  <div class="credits-bar top-credits">
+    <div class="credits-content">
+      <p><strong>llm-fallbacks</strong> — zero-config free model chat</p>
+      <div id="sysSetting" class="top-settings-button" title="Failover settings"><i class="fas fa-server"></i> Failover</div>
+      <div id="byokSetting" class="top-settings-button" title="API keys"><i class="fas fa-key"></i> BYOK</div>
+      <div id="explorerSetting" class="top-settings-button" title="Model explorer"><i class="fas fa-table"></i> Models</div>
+    </div>
+  </div>
+
+  <main class="main-chat-wrapper">
+    <div id="chatMount" class="mur-app mur-app-embedded mur-sidebar-animated">
+      <aside class="mur-sidebar">
+        <header class="mur-sidebar-header">
+          <div class="mur-sidebar-logo"><span>LF</span><span>llm-fallbacks</span></div>
+          <button type="button" class="mur-close-sidebar-btn" aria-label="Close sidebar">×</button>
+        </header>
+        <div class="mur-sidebar-actions">
+          <button type="button" class="mur-new-chat-btn mur-sidebar-nav-btn">New Chat</button>
+        </div>
+        <div class="mur-sidebar-content"><p class="mur-sidebar-status">Loading…</p></div>
+        <div class="mur-sidebar-footer"></div>
+      </aside>
+      <main class="mur-main-area">
+        <header class="mur-main-header">
+          <button type="button" class="mur-open-sidebar-btn" aria-label="Open sidebar">☰</button>
+          <h2 class="mur-header-title">Chat</h2>
+        </header>
+        <div class="mur-chat-layout-wrapper">
+          <div class="mur-chat-scroll-area">
+            <div class="mur-chat-history" role="log"></div>
+          </div>
+          <div class="mur-chat-form-container">
+            <form class="mur-chat-form">
+              <textarea class="mur-chat-input" id="chatinput" rows="1" placeholder="Message…" aria-label="Message"></textarea>
+              <div class="mur-form-footer-right">
+                <button type="submit" class="mur-send-btn mur-form-icon-btn mur-action-btn" id="sendbutton" aria-label="Send">↑</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </main>
+
+  <div id="sysMask" class="shell-panel-mask" hidden></div>
+  <aside id="shell-panel-failover" class="shell-panel"><div id="panel-failover"></div></aside>
+  <aside id="shell-panel-byok" class="shell-panel"><div id="panel-byok"></div></aside>
+  <aside id="shell-panel-explorer" class="shell-panel"><div id="panel-explorer"></div></aside>
+  <button type="button" id="closeSet" title="Close panel">× Close</button>
+
+  <script type="module" src="./assets/chat.js?v=__APP_VERSION__"></script>
+</body>
+</html>
