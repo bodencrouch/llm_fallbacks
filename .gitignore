@@ -170,3 +170,9 @@ playwright/.cache/
 
 # Compound Engineering local config
 .compound-engineering/*.local.yaml
+.claude/
+.cursor/
+.mission/
+.remember/
+AGENTS.md
+CLAUDE.md
