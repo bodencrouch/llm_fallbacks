@@ -41,31 +41,6 @@ fallbacks = get_fallback_list("chat")
 print(f"Fallback order: {fallbacks}")
 ```
 
-## Try the chat demo
-
-Open **https://bodecloud.github.io/llm_fallbacks/** — no account, no API key.
-
-Type a message and send. The site picks from ranked free models and switches if something breaks.
-
-**Settings (top bar):**
-
-| Button | What it does |
-|--------|----------------|
-| **Server** | Change which server handles your chat (usually leave as default). |
-| **Your keys** | Add your own provider keys in this browser only — optional. |
-| **Models** | Browse the free model list we update daily. |
-
-**Good to know:** This is a shared public demo. It can be slow, hit rate limits, or go down. There is no uptime guarantee. See [`docs/CAVEATS.md`](docs/CAVEATS.md).
-
-**How it works (for the curious):**
-
-- The page is static files on GitHub Pages.
-- Your messages go to a Cloudflare Worker proxy — not straight to OpenAI or Google.
-- A backup LiteLLM server on Render can take over if the Worker is busy.
-- Model lists come from this repo's `configs/` folder.
-
-Plugin guide: [`docs/chat-ui-plugins.md`](docs/chat-ui-plugins.md). Operator docs: [`edge/README.md`](edge/README.md), [`deploy/README.md`](deploy/README.md).
-
 ## Run your own gateway
 
 Host an OpenAI-compatible proxy with a `free` model alias (ranked fallback chain):
