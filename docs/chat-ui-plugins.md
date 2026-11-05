@@ -89,5 +89,5 @@ Playwright tests in `tests/e2e/`. Selectors target murm-ui (`.mur-message-assist
 ```bash
 npm ci
 npx playwright install chromium
-PAGES_BASE_URL=https://bodecloud.github.io/llm_fallbacks/ npm run test:e2e
+PAGES_BASE_URL=https://bodencrouch.github.io/llm_fallbacks/ npm run test:e2e
 ```

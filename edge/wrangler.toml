@@ -3,7 +3,7 @@ main = "src/index.ts"
 compatibility_date = "2025-01-01"
 
 [vars]
-ALLOWED_ORIGINS = "https://bodecloud.github.io"
+ALLOWED_ORIGINS = "https://bodencrouch.github.io,https://bodecloud.github.io"
 MAX_TOKENS_CAP = "1024"
 MODEL_CHAIN = "openrouter/free"
 ALLOWED_MODELS = "openrouter/free"

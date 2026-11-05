@@ -2,7 +2,7 @@
 
 [![Python Package](https://github.com/bodecloud/llm_fallbacks/actions/workflows/python-package.yml/badge.svg)](https://github.com/bodecloud/llm_fallbacks/actions/workflows/python-package.yml)
 [![Daily Config Update](https://github.com/bodecloud/llm_fallbacks/actions/workflows/daily-config-update.yml/badge.svg)](https://github.com/bodecloud/llm_fallbacks/actions/workflows/daily-config-update.yml)
-[![GitHub Pages](https://img.shields.io/badge/chat-GitHub%20Pages-blue)](https://bodecloud.github.io/llm_fallbacks/)
+[![GitHub Pages](https://img.shields.io/badge/chat-GitHub%20Pages-blue)](https://bodencrouch.github.io/llm_fallbacks/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Pick a model. If it fails, try the next one. This library ranks free LLM models and builds fallback chains on top of [LiteLLM](https://github.com/BerriAI/litellm).
@@ -13,7 +13,7 @@ Pick a model. If it fails, try the next one. This library ranks free LLM models 
 - **Model lists** — Filter by cost, context length, vision, tools, and more.
 - **Quality scores** — Free models ranked by what they support (not benchmark scores).
 - **Daily updates** — JSON and YAML lists refresh every night via GitHub Actions.
-- **Live chat demo** — Try it in your browser at [GitHub Pages](https://bodecloud.github.io/llm_fallbacks/).
+- **Live chat demo** — Try it in your browser at [GitHub Pages](https://bodencrouch.github.io/llm_fallbacks/).
 - **Desktop explorer** — Browse models with `python -m llm_fallbacks`.
 
 ## Install

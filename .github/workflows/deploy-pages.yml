@@ -123,7 +123,7 @@ jobs:
 
       - name: Run Pages chat e2e (mocked routes on live site)
         env:
-          PAGES_BASE_URL: https://bodecloud.github.io/llm_fallbacks/
+          PAGES_BASE_URL: https://bodencrouch.github.io/llm_fallbacks/
         run: |
           cd webui && npm ci && npm run build
           cd ..
@@ -131,7 +131,7 @@ jobs:
 
       - name: Run live Pages chat e2e (real proxy)
         env:
-          PAGES_BASE_URL: https://bodecloud.github.io/llm_fallbacks/
+          PAGES_BASE_URL: https://bodencrouch.github.io/llm_fallbacks/
         run: npx playwright test tests/e2e/pages-chat-live.spec.ts tests/e2e/pages-chat-zero-config.spec.ts
 
       - uses: actions/upload-artifact@v4
